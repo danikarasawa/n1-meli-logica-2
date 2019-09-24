@@ -23,16 +23,20 @@
 // console.log = (`Produto ${clientChoice} com desconto de R$ ${discont}`);
 
 let r = require('readline-sync');
-let product = '';
-let price = '';
+//let product = '';
+//let price = '';
 let productList = [{product: 'xampu', price: 59.90}, 
                    {product: 'condicionador', price: 65.00}, 
-                   {product: 'hidratante', price: 74.90}];
+                   {product: 'hidratante', price: 74.90},
+                   {product: 'esfoliante', price: 105.90},
+                   {product: 'esmalte', price: 15.75},
+                   {product: 'escova', price: 45.50},];
 
-let clientChoice = productList[parseInt(r.question('Digite o número do produto, por favor'))];
+let clientChoice = productList[parseInt(r.question('Digite o numero do produto, por favor'))];
 //console.log(clientChoice);
 let promo = parseInt(r.question('Digite o valor do desconto, por favor'));
 //console.log(promo);
-let discont = clientChoice.price*(promo/100);
+let discount = clientChoice.price*(promo/100);
+let newPrice = clientChoice.price - discount;
 //console.log(discont);
-console.log(`O produto ${clientChoice.product} teve desconto de R$ ${discont.toFixed(2)}`);
+console.log(`O produto ${clientChoice.product} teve desconto de R$ ${discount.toFixed(2)} e voce vai pagar apenas ${newPrice.toFixed(2)}`);
