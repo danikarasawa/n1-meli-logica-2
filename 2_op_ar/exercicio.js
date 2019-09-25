@@ -32,9 +32,9 @@ let productList = [{product: 'xampu', price: 59.90},
                    {product: 'esmalte', price: 15.75},
                    {product: 'escova', price: 45.50},];
 
-let clientChoice = productList[parseInt(r.question('Digite o numero do produto, por favor'))];
+let clientChoice = productList[parseInt(r.question('Digite o numero do produto, por favor: '))];
 //console.log(clientChoice);
-let promo = parseInt(r.question('Digite o valor do desconto, por favor'));
+let promo = parseInt(r.question('Digite o valor do desconto, por favor: '));
 //console.log(promo);
 let discount = clientChoice.price*(promo/100);
 let newPrice = clientChoice.price - discount;
