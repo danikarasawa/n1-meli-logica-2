@@ -23,7 +23,7 @@ const r = require("readline-sync");
 // let number = parseInt(r.question('Digite um numero de 1 a 10, por favor: '));
 // let star = '';
 
-// for(let i = 0; i <= number; i++){
+// for(let i = 0; i < number; i++){
 //     star += "*";
 //     console.log(star);    
 // };
